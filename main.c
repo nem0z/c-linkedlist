@@ -14,5 +14,18 @@ int main() {
     printf("%d\n", len);
     display(list);
 
+    printf("\n-----\n");
+    pop(list);
+    display(list);
+
+    printf("\n-----\n");
+    pop_front(list);
+    display(list);
+
+    printf("\n-----\n");
+    pop(list);
+    printf("%d\n", length(list));
+    display(list);
+
     return 0;
 }
