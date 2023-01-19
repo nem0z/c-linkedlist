@@ -6,5 +6,6 @@
 #include "struct/struct.h"
 #include "display/display.h"
 #include "pop/pop.h"
+#include "delete/delete.h"
 
 #endif
