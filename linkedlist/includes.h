@@ -7,5 +7,6 @@
 #include "display/display.h"
 #include "pop/pop.h"
 #include "delete/delete.h"
+#include "insert/insert.h"
 
 #endif
