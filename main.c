@@ -9,6 +9,7 @@ int main() {
 
     push(list, 'C');
     push_front(list, 'A');
+    insert(list, 'B', 1);
 
     unsigned len = length(list);
     printf("%d\n", len);
