@@ -7,5 +7,7 @@
 unsigned length(linkedlist * list);
 char is_empty(linkedlist * list);
 node * get_tail(linkedlist * list);
+node * at(linkedlist * list, unsigned pos);
+unsigned find(linkedlist * list, node * n);
 
 #endif
