@@ -1,1 +1,1 @@
-clear && make && ./main.out
+clear && make && leaks --atExit --list -- ./main.out | grep Process && ./main.out
