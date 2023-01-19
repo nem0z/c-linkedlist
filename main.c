@@ -16,6 +16,7 @@ int main() {
 
     char * str_list = to_string(list);
     printf("String : |%s|\n", str_list);
+    free(str_list);
 
     node * node_not_in_list = malloc(sizeof(node));
     printf("Find A : %d\n", find(list, list->head));
@@ -23,21 +24,22 @@ int main() {
     printf("Find C : %d\n", find(list, list->head->next->next));
     printf("Find NULL : %d\n", find(list, NULL));
     printf("Find node not in list : %d\n", find(list, node_not_in_list));
+    free(node_not_in_list);
 
     printf("\n-----\n");
     printf("Pos 1 : %c\n", at(list, 2)->data);
-    pop(list);
+    free(pop(list));
     display(list);
 
     printf("\n-----\n");
     printf("Pos 1 : %c\n", at(list, 0)->data);
-    pop_front(list);
+    free(pop_front(list));
     display(list);
 
     printf("\n-----\n");
     printf("Pos 1 : %c\n", at(list, 0)->data);
-    pop(list);
-    display(list);
+
+    delete(list);
 
     return 0;
 }
