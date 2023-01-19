@@ -5,6 +5,7 @@
 #include "../linkedlist.h"
 
 unsigned length(linkedlist * list);
+char is_empty(linkedlist * list);
 node * get_tail(linkedlist * list);
 
 #endif
