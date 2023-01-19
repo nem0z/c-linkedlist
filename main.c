@@ -3,8 +3,8 @@
 
 int main() {
 
-    linkedlist * list = (linkedlist *)malloc(sizeof(linkedlist));
-    list->head = (node *)malloc(sizeof(node));
+    linkedlist * list = malloc(sizeof(linkedlist));
+    list->head = malloc(sizeof(node));
     list->head->data = 'B';
 
     push(list, 'C');
@@ -14,17 +14,29 @@ int main() {
     printf("%d\n", len);
     display(list);
 
+    char * str_list = to_string(list);
+    printf("String : |%s|\n", str_list);
+
+    node * node_not_in_list = malloc(sizeof(node));
+    printf("Find A : %d\n", find(list, list->head));
+    printf("Find B : %d\n", find(list, list->head->next));
+    printf("Find C : %d\n", find(list, list->head->next->next));
+    printf("Find NULL : %d\n", find(list, NULL));
+    printf("Find node not in list : %d\n", find(list, node_not_in_list));
+
     printf("\n-----\n");
+    printf("Pos 1 : %c\n", at(list, 2)->data);
     pop(list);
     display(list);
 
     printf("\n-----\n");
+    printf("Pos 1 : %c\n", at(list, 0)->data);
     pop_front(list);
     display(list);
 
     printf("\n-----\n");
+    printf("Pos 1 : %c\n", at(list, 0)->data);
     pop(list);
-    printf("%d\n", length(list));
     display(list);
 
     return 0;
