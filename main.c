@@ -3,9 +3,11 @@
 
 int main() {
 
-    linkedlist * list = malloc(sizeof(linkedlist));
-    list->head = malloc(sizeof(node));
-    list->head->data = 'B';
+    char * array_data = "ABC";
+    linkedlist * list = new_list_from_array(array_data);
+
+    printf("Original list : \n");
+    display(list);
 
     push(list, 'C');
     push_front(list, 'A');
