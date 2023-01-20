@@ -8,5 +8,6 @@
 #include "pop/pop.h"
 #include "delete/delete.h"
 #include "insert/insert.h"
+#include "new/new.h"
 
 #endif
