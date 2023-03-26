@@ -10,5 +10,6 @@
 #include "insert/insert.h"
 #include "new/new.h"
 #include "copy/copy.h"
+#include "merge/merge.h"
 
 #endif
