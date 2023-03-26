@@ -9,5 +9,6 @@
 #include "delete/delete.h"
 #include "insert/insert.h"
 #include "new/new.h"
+#include "copy/copy.h"
 
 #endif
