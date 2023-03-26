@@ -1,6 +1,7 @@
 #ifndef INCLUDE_LINKEDLIST_H
 #define INCLUDE_LINKEDLIST_H
 
+#include <stdlib.h>
 #include "linkedlist.h"
 #include "push/push.h"
 #include "struct/struct.h"
