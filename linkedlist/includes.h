@@ -12,5 +12,6 @@
 #include "new/new.h"
 #include "copy/copy.h"
 #include "merge/merge.h"
+#include "slice/slice.h"
 
 #endif
