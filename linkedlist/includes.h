@@ -13,5 +13,6 @@
 #include "copy/copy.h"
 #include "merge/merge.h"
 #include "slice/slice.h"
+#include "reverse/reverse.h"
 
 #endif
