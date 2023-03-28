@@ -28,5 +28,6 @@ linkedlist * new_list_from_array(char * array_data) {
         prev_node = new_node;
     }
 
+    prev_node->next = NULL;
     return list;
 }
