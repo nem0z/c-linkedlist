@@ -1,6 +1,7 @@
 #include "display.h"
 
 void display(linkedlist * list) {
+    if(list == NULL) return;
     if(list->head == NULL) return;
 
     for(node * n = list->head; n != NULL; n = n->next) {
