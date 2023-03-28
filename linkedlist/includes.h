@@ -15,5 +15,6 @@
 #include "slice/slice.h"
 #include "reverse/reverse.h"
 #include "map/map.h"
+#include "filter/filter.h"
 
 #endif
