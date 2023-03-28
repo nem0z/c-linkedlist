@@ -1,1 +1,6 @@
-*.out
+**/*.out
+**/*.a
+**/*.o
+**/*.gcda
+**/*.gcno
+linkedlist/gcovr

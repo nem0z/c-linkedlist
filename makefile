@@ -1,8 +1,17 @@
-CC=gcc
-CFLAGS=-I.
-
-main: main.c
-	$(CC) -o main.out main.c $(CFLAGS) linkedlist/*/*.c -I linkedlist
+all:
+	make -C linkedlist/
+	make -C src/
 
 clean:
-	rm -f main
+	make -C linkedlist/ $@
+	make -C src/ $@
+
+fclean:
+	make -C linkedlist/ $@
+	make -C src/ $@
+
+re:
+	make -C linkedlist/ $@
+	make -C src/ $@
+
+.PHONY: all clean fclean re
