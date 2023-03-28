@@ -4,16 +4,20 @@ linkedlist * new_list(char data) {
     linkedlist * list = malloc(sizeof(linkedlist));
     list->head = malloc(sizeof(node));
     list->head->data = data;
+    list->head->next = NULL;
 
     return list;
 }
 
 linkedlist * new_list_from_array(char * array_data) {
     linkedlist * list = malloc(sizeof(linkedlist));
-    list->head = malloc(sizeof(node));
 
-    if(array_data == NULL || *array_data == '\0')
+    if(array_data == NULL || *array_data == '\0') {
+        list->head = NULL;
         return list;
+    }
+
+    list->head = malloc(sizeof(node));
 
     char * data = array_data;
     list->head->data = *data;
