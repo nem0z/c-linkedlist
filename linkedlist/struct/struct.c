@@ -1,7 +1,7 @@
 #include "struct.h"
 
 unsigned length(linkedlist * list) {
-    if(list->head == NULL) return 0;
+    if(list == NULL || list->head == NULL) return 0;
 
     unsigned length = 1;
     for(node * n = list->head; n->next != NULL; n = n->next) {
