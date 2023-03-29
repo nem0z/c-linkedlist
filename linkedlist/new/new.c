@@ -1,5 +1,11 @@
 #include "new.h"
 
+linkedlist * new_empty_list() {
+    linkedlist * list = malloc(sizeof(linkedlist));
+    list->head = NULL;
+    return list;
+}
+
 linkedlist * new_list(char data) {
     linkedlist * list = malloc(sizeof(linkedlist));
     list->head = malloc(sizeof(node));
