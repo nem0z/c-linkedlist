@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include "../linkedlist.h"
 
+linkedlist * new_empty_list();
 linkedlist * new_list(char data);
 linkedlist * new_list_from_array(char * datas);
 
