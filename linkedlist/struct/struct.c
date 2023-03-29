@@ -12,8 +12,7 @@ unsigned length(linkedlist * list) {
 }
 
 char is_empty(linkedlist * list) {
-    if(list->head == NULL) return 1;
-    return 0;
+    return (list == NULL || list->head == NULL);
 }
 
 node * get_tail(linkedlist * list) {
