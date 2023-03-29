@@ -16,6 +16,8 @@ char is_empty(linkedlist * list) {
 }
 
 node * get_tail(linkedlist * list) {
+    if(list == NULL || list->head == NULL) return NULL;
+
     node * n = list->head;
     for(; n->next != NULL; n = n->next);
 
