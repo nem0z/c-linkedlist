@@ -1,7 +1,8 @@
 #include "push.h"
 
 void push_back(linkedlist * list, char data) {
-    node * tail = get_tail(list);
+    if(list == NULL) return;
+
     node * new_node = malloc(sizeof(node));
 
     new_node->data = data;
