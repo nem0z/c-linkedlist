@@ -6,6 +6,7 @@ void push_back(linkedlist * list, char data) {
     node * new_node = malloc(sizeof(node));
 
     new_node->data = data;
+    new_node->next = NULL;
     tail->next = new_node;
 }
 
