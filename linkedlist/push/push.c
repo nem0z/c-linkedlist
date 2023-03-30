@@ -14,7 +14,10 @@ void push_front(linkedlist * list, char data) {
     node * new_node = malloc(sizeof(node));
     new_node->data = data;
 
+    if(list->head != NULL) {
     new_node->next = list->head;
+    }
+
     list->head = new_node;
 }
 
