@@ -9,10 +9,15 @@ void push_back(linkedlist * list, char data) {
 }
 
 void push_front(linkedlist * list, char data) {
+    if(list == NULL) return;
+
     node * new_node = malloc(sizeof(node));
     new_node->data = data;
 
-    new_node->next = list->head;
+    if(list->head != NULL) {
+        new_node->next = list->head;
+    }
+
     list->head = new_node;
 }
 
