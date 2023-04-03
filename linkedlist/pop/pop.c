@@ -1,7 +1,7 @@
 #include "pop.h"
 
 node * pop_back(linkedlist * list) {
-    if(list == NULL) return;
+    if(list == NULL) return NULL;
     if(list->head == NULL) return NULL;
 
     if(list->head->next == NULL) {
@@ -19,7 +19,7 @@ node * pop_back(linkedlist * list) {
 }
 
 node * pop_front(linkedlist * list) {
-    if(list == NULL) return;
+    if(list == NULL) return NULL;
     if(list->head == NULL) return NULL;
 
     node * head = list->head;
