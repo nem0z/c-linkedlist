@@ -26,6 +26,7 @@ node * get_tail(linkedlist * list) {
 
 node * at(linkedlist * list, unsigned pos) {
     if(list == NULL) return NULL;
+    if(pos < 0) return
 
     return n;
 }
