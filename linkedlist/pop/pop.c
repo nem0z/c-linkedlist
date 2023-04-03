@@ -1,10 +1,9 @@
 #include "pop.h"
 
 node * pop_back(linkedlist * list) {
-    // if head is null => list is empty => return null
+    if(list == NULL) return NULL;
     if(list->head == NULL) return NULL;
 
-    // if head->next is null => list has only 1 element (head) => pop head
     if(list->head->next == NULL) {
         node * head = list->head;
         list->head = NULL;
@@ -20,7 +19,7 @@ node * pop_back(linkedlist * list) {
 }
 
 node * pop_front(linkedlist * list) {
-    // if head is null => list is empty => return null
+    if(list == NULL) return NULL;
     if(list->head == NULL) return NULL;
 
     node * head = list->head;
