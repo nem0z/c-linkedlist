@@ -1,9 +1,7 @@
 #include "reverse.h"
 
 void reverse(linkedlist * list) {
-    if(list->head == NULL) return;
-    if(list->head->next == NULL) return;
-
+    if(list == NULL || list->head == NULL || list->head->next == NULL) return;
     node * first = list->head;
 
     for(node * current = first->next; current != NULL;) {
