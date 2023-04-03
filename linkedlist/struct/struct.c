@@ -25,9 +25,7 @@ node * get_tail(linkedlist * list) {
 }
 
 node * at(linkedlist * list, unsigned pos) {
-    node * n;
-    unsigned i;
-    for(n = list->head, i = 0; n != NULL && i < pos; n = n->next, ++i);
+    if(list == NULL) return NULL;
 
     return n;
 }
