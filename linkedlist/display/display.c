@@ -10,6 +10,8 @@ void display(linkedlist * list) {
 }
 
 char * to_string(linkedlist * list) {
+    if(list == NULL) return NULL;
+    
     unsigned len = length(list);
     char * str = malloc((len+1) * sizeof(char));
 
