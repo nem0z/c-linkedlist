@@ -1,4 +1,4 @@
-#include <criterion/criterion.h>g
+#include <criterion/criterion.h>
 
 #include "merge.h"
 #include "../new/new.h"
