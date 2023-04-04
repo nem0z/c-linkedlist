@@ -1,6 +1,6 @@
 #include "equal.h"
 
-char equal(linkedlist * list, linkedlist * other) {
+unsigned equal(linkedlist * list, linkedlist * other) {
     if(list == NULL || other == NULL) return list == other;
     
     node * n1 = list->head;

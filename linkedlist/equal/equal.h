@@ -4,6 +4,6 @@
 #include <stdlib.h>
 #include "../linkedlist.h"
 
-char equal(linkedlist * list, linkedlist * other);
+unsigned equal(linkedlist * list, linkedlist * other);
 
 #endif
