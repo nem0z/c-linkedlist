@@ -78,7 +78,7 @@ Test(merge, merge_one_element_list) {
 Test(merge, merge_big_list) {
     linkedlist * list = new_list_from_array("ABC");
     linkedlist * to_merge = new_list_from_array("DE");
-    printf("%p\n", to_merge);
+
     merge(list, to_merge);
 
     cr_assert_eq(length(list), 5);
