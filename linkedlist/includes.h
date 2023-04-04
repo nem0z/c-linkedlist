@@ -16,5 +16,6 @@
 #include "reverse/reverse.h"
 #include "map/map.h"
 #include "filter/filter.h"
+#include "equal/equal.h"
 
 #endif
