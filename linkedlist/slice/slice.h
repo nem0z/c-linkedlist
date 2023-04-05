@@ -5,8 +5,8 @@
 #include "../linkedlist.h"
 #include "../delete/delete.h"
 
-void slice_to(linkedlist * list, unsigned pos);
-void slice_from(linkedlist * list, unsigned pos);
-void slice(linkedlist * list, unsigned from, unsigned to);
+void slice_to(linkedlist * list, int pos);
+void slice_from(linkedlist * list, int pos);
+void slice(linkedlist * list, int from, int to);
 
 #endif
