@@ -1,11 +1,7 @@
 #include "slice.h"
 
-void slice_to(linkedlist * list, unsigned pos) {
-    if(list->head == NULL) return;
-    if(pos == 0) {
-        clear(list);
-        return;
-    }
+void slice_to(linkedlist * list, int pos) {
+    if(list == NULL || pos <= 0 || list->head == NULL) return;
 
     node * current = list->head;
     for(unsigned i = 0; i < pos-1; ++i) {
@@ -27,8 +23,8 @@ void slice_to(linkedlist * list, unsigned pos) {
     free(current);
 }
 
-void slice_from(linkedlist * list, unsigned pos) {
-    if(pos <= 0 || list->head == NULL) return;
+void slice_from(linkedlist * list, int pos) {
+    if(list == NULL || pos <= 0 || list->head == NULL) return;
 
     node * current = list->head;
     for(unsigned i = 0; i < pos; ++i) {
@@ -40,9 +36,8 @@ void slice_from(linkedlist * list, unsigned pos) {
     list->head = current;
 }
 
-void slice(linkedlist * list, unsigned from, unsigned to) {
-    if(from > to) return;
-    if(from == to) return clear(list);
+void slice(linkedlist * list, int from, int to) {
+    if(list == NULL || list->head == NULL) return;
 
     slice_from(list, from);
     slice_to(list, to);
