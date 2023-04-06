@@ -38,6 +38,7 @@ void slice_from(linkedlist * list, int pos) {
 
 void slice(linkedlist * list, int from, int to) {
     if(list == NULL || list->head == NULL) return;
+    if(from >= to || from < 0) return;
 
     slice_from(list, from);
     slice_to(list, to);
