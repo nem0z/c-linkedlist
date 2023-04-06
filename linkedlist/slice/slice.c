@@ -10,9 +10,7 @@ void slice_to(linkedlist * list, int pos) {
     }
 
     node * last = current;
-    current = current->next;
-
-    for(; current->next != NULL;) {
+    for(current = current->next; current != NULL;) {
         node * tmp = current;
         current = current->next;
         free(tmp);
