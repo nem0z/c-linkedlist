@@ -9,7 +9,6 @@ void slice_to(linkedlist * list, int pos) {
         current = current->next;
     }
 
-    if(current->next == NULL) return;
     node * last = current;
     current = current->next;
 
