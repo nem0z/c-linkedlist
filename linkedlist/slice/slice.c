@@ -4,7 +4,7 @@ void slice_to(linkedlist * list, int pos) {
     if(list == NULL || pos <= 0 || list->head == NULL) return;
 
     node * current = list->head;
-    for(unsigned i = 0; i < pos-1; ++i) {
+    for(int i = 0; i < pos; ++i) {
         if(current->next == NULL) return;
         current = current->next;
     }
@@ -27,7 +27,7 @@ void slice_from(linkedlist * list, int pos) {
     if(list == NULL || pos <= 0 || list->head == NULL) return;
 
     node * current = list->head;
-    for(unsigned i = 0; i < pos; ++i) {
+    for(int i = 0; i < pos; ++i) {
         node * tmp = current;
         current = current->next;
         free(tmp);
