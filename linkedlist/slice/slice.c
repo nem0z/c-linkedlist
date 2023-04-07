@@ -15,9 +15,7 @@ void slice_to(linkedlist * list, int pos) {
         current = current->next;
         free(tmp);
     }
-
     last->next = NULL;
-    free(current);
 }
 
 void slice_from(linkedlist * list, int pos) {
