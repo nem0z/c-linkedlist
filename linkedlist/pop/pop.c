@@ -29,5 +29,5 @@ node * pop_front(linkedlist * list) {
 }
 
 node * pop(linkedlist * list) {
-    return pop_back(list);
+    return pop_front(list);
 }

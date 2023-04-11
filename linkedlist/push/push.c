@@ -17,6 +17,6 @@ void push_front(linkedlist * list, char data) {
 }
 
 void push(linkedlist * list, char data) {
-    push_back(list, data);
+    push_front(list, data);
 }
 
