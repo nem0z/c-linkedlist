@@ -1,37 +1,28 @@
 #include "slice.h"
 
-void slice_to(linkedlist * list, unsigned pos) {
-    if(list->head == NULL) return;
-    if(pos == 0) {
-        clear(list);
-        return;
-    }
+void slice_to(linkedlist * list, int pos) {
+    if(list == NULL || pos <= 0 || list->head == NULL) return;
 
     node * current = list->head;
-    for(unsigned i = 0; i < pos-1; ++i) {
+    for(int i = 0; i < pos; ++i) {
         if(current->next == NULL) return;
         current = current->next;
     }
 
-    if(current->next == NULL) return;
     node * last = current;
-    current = current->next;
-
-    for(; current->next != NULL;) {
+    for(current = current->next; current != NULL;) {
         node * tmp = current;
         current = current->next;
         free(tmp);
     }
-
     last->next = NULL;
-    free(current);
 }
 
-void slice_from(linkedlist * list, unsigned pos) {
-    if(pos <= 0 || list->head == NULL) return;
+void slice_from(linkedlist * list, int pos) {
+    if(list == NULL || pos <= 0 || list->head == NULL) return;
 
     node * current = list->head;
-    for(unsigned i = 0; i < pos; ++i) {
+    for(int i = 0; i < pos; ++i) {
         node * tmp = current;
         current = current->next;
         free(tmp);
@@ -40,10 +31,29 @@ void slice_from(linkedlist * list, unsigned pos) {
     list->head = current;
 }
 
-void slice(linkedlist * list, unsigned from, unsigned to) {
-    if(from > to) return;
-    if(from == to) return clear(list);
+void slice(linkedlist * list, int from, int to) {
+    if(list == NULL || list->head == NULL) return;
+    if(from >= to || from < 0) return;
 
-    slice_from(list, from);
-    slice_to(list, to);
+    int i = 0;
+    for(; list->head != NULL && i < from; ++i) {
+        node * tmp = list->head;
+        list->head = list->head->next;
+        free(tmp);
+    }
+    
+    if(list->head == NULL) return;
+
+    node * current = list->head;
+    for(; current != NULL && i < to; current = current->next, ++i);
+
+    if(current == NULL || current->next == NULL) return;
+
+    node * last = current;
+    for(current = current->next; current != NULL;) {
+        node * tmp = current;
+        current = current->next;
+        free(tmp);
+    }
+    last->next = NULL;
 }
