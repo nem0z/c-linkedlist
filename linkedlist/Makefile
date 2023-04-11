@@ -1,6 +1,10 @@
-SRC := $(filter-out %.test.c, $(wildcard **/*.c))
+CC = gcc
 
-TEST_SRC := $(wildcard **/*.test.c)
+SRC = $(filter-out %.test.c, $(wildcard **/*.c))
+
+TEST_SRC = $(wildcard **/*.test.c)
+
+CRITERION = /opt/homebrew/Cellar/criterion/2.4.1_2/
 
 NAME	=	liblinkedlist.a
 
@@ -31,10 +35,10 @@ fclean: clean
 
 re: fclean all
 
-test: clean $(TEST_OBJ)
-	$(CC) -o ${TEST_NAME} ${SRC} $(TEST_SRC) --coverage -lcriterion
+test: clean $(OBJ)
+	$(CC) -o ${TEST_NAME} ${SRC} $(TEST_SRC) -I $(CRITERION)/include -L $(CRITERION)/lib --coverage -lcriterion
 	./${TEST_NAME}
 
 gcovr: test
 	mkdir -p $(DIR_GCOVR) && cd $(DIR_GCOVR); \
-		gcovr --root ../ --exclude='.*test.*' --html --html-details --html-title $(NAME) -o $(NAME).html
+	gcovr --root ../ --exclude='.*test.*' --html --html-details --html-title $(NAME) -o $(NAME).html
