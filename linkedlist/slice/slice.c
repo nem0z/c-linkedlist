@@ -45,7 +45,7 @@ void slice(linkedlist * list, int from, int to) {
     if(list->head == NULL) return;
 
     node * current = list->head;
-    for(; current != NULL && i < to; current = current->next, i < from, ++i);
+    for(; current != NULL && i < to; current = current->next, ++i);
 
     if(current == NULL || current->next == NULL) return;
 
