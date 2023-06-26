@@ -11,3 +11,15 @@ int find(linkedlist * list, char (*func)(char)) {
     if(n == NULL) return -1;
     return i;
 }
+
+int index_of(linkedlist * list, char data) {
+    if(list == NULL || list->head == NULL) return -1;
+
+    int i = 0;
+    node * n = list->head;
+
+    for(; n != NULL && n->data != data; n = n->next, ++i);
+
+    if(n == NULL) return -1;
+    return i;
+}
