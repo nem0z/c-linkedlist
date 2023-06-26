@@ -30,14 +30,3 @@ node * at(linkedlist * list, unsigned pos) {
 
     return n;
 }
-
-unsigned find(linkedlist * list, node * find) {
-    unsigned i = 0;
-    node * n = list->head;
-
-    for(; n != NULL && n != find; n = n->next, ++i);
-
-    if(n == NULL) return -1;
-    return i;
-}
-

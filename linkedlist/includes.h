@@ -17,5 +17,6 @@
 #include "map/map.h"
 #include "filter/filter.h"
 #include "equal/equal.h"
+#include "find/find.h"
 
 #endif
